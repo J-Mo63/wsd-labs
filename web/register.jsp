@@ -16,19 +16,19 @@
         <table>
             <tbody>
             <tr>
-                <td><label for="email">Email</label></td>
+                <td><p>Email</p></td>
                 <td><input name="email" type="text" value=""></td>
             </tr>
             <tr>
-                <td><label for="name">Full name</label></td>
+                <td><p>Full name</p></td>
                 <td><input name="name" type="text" value=""></td>
             </tr>
             <tr>
-                <td><label for="password">Password</label></td>
+                <td><p>Password</p></td>
                 <td><input name="password" type="password" value=""></td>
             </tr>
             <tr>
-                <td><label for="gender">Gender</label></td>
+                <td><p>Gender</p></td>
                 <td>
                     <div>
                         <input name="gender" type="radio">Male</div>
@@ -37,7 +37,7 @@
                 </td>
             </tr>
             <tr>
-                <td><label for="favcol">Favourite colour</label></td>
+                <td><p>Favourite colour</p></td>
                 <td>
                     <select name="favcol"><option>Red</option>
                         <option>Green</option>
@@ -48,7 +48,7 @@
                 </td>
             </tr>
             <tr>
-                <td><label for="tos">Agree to TOS</label></td>
+                <td><p>Agree to TOS</p></td>
                 <td><input name="tos" type="checkbox" value=""></td>
             </tr>
             <tr>
