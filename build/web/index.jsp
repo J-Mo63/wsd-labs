@@ -28,6 +28,8 @@
         </ul>
     <% } else { %>
         <p>You are not logged in</p>
+        <a href="login.jsp">Login</a>
+        <span> | </span>
         <a href="register.jsp">Register</a>
     <% } %>
   </body>

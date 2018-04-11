@@ -17,6 +17,13 @@ public class Users implements Serializable {
     public ArrayList<User> getList() {
         return list;
     }
+    public boolean userExists(String email) {
+        for (User user : list) {
+            if (user.getEmail().equals(email))
+                return true;
+        }
+        return false;
+    }
     public void addUser(User user) {
         list.add(user);
     }

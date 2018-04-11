@@ -5,7 +5,11 @@
   Time: 11:01 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="uts.wsd.User" %>
+<%@ page import="uts.wsd.User" import="uts.wsd.Users"%>
+<% String filePath = application.getRealPath("WEB-INF/users.xml"); %>
+<jsp:useBean id="diaryApp" class="uts.wsd.DiaryApplication" scope="application">
+    <jsp:setProperty name="diaryApp" property="filePath" value="<%=filePath%>"/>
+</jsp:useBean>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String name = request.getParameter("name");
@@ -28,6 +32,14 @@
 <% if (tos) {
     User user = new User(email, name, password, gender, favcol);
     session.setAttribute("user", user);
+    
+    Users users = diaryApp.getUsers();
+    
+    if (!users.userExists(email)) {
+        users.addUser(user);
+    }
+    
+    diaryApp.updateXML(users, filePath);
 %>
     <body bgcolor="<%= favcol %>">
         <p>Welcome, <%= name %>!</p>
