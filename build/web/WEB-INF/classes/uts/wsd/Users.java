@@ -24,6 +24,14 @@ public class Users implements Serializable {
         }
         return false;
     }
+    
+    public User getUser(String email) {
+        for (User user : list) {
+            if (user.getEmail().equals(email))
+                return user;
+        }
+        return null;
+    }
     public void addUser(User user) {
         list.add(user);
     }
