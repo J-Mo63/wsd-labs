@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="Calculator">
-      <implementation-class>uts.wsd.soap.Calculator</implementation-class>
-    </service>
     <service name="Geometry">
       <implementation-class>uts.wsd.soap.Geometry</implementation-class>
+    </service>
+    <service name="Calculator">
+      <implementation-class>uts.wsd.soap.Calculator</implementation-class>
     </service>
     <service name="DiarySOAP">
       <implementation-class>uts.wsd.soap.DiarySOAP</implementation-class>
